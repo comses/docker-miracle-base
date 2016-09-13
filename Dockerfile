@@ -2,5 +2,6 @@ FROM centos:7
 MAINTAINER CoMSES Net <dev@comses.net>
 
 USER root
-ARG COMSES_UID=2000
-RUN useradd -U -m -u $COMSES_UID -s /sbin/nologin comses
+ARG UID=2000
+ARG USERNAME=comses
+RUN useradd -U -m -u $UID -s /bin/bash $USERNAME
